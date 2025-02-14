@@ -16,11 +16,11 @@ export default function Home() {
   const { isSignedIn, isLoaded } = useAuth(); 
 
 
-  // useEffect(() => {
-  //   if (isLoaded && !isSignedIn) {
-  //     window.location.href = "/sign-in"; 
-  //   }
-  // }, [isLoaded, isSignedIn]);
+  useEffect(() => {
+    if (isLoaded && !isSignedIn) {
+      window.location.href = "/sign-in"; 
+    }
+  }, [isLoaded, isSignedIn]);
 
 if (isLoading) {
   <div className='flex items-center flex-col gap-3 text-purple-500'>
